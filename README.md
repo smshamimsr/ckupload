@@ -1,4 +1,5 @@
-  ClassicEditor
+ <script>
+        ClassicEditor
             .create(document.querySelector('#blog'), {
                 ckfinder: {
                     uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}"
@@ -7,7 +8,7 @@
             .catch(error => {
                 console.error(error);
             });
-
+    </script>
 
 Route::post('ckeditor-upload', [TestmonialController::class, 'ckeditorUpload'])->name('ckeditor.upload');
 
