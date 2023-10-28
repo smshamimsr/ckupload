@@ -1,8 +1,10 @@
     
 //Route
+
 Route::post('ckeditor-upload', [TestmonialController::class, 'ckeditorUpload'])->name('ckeditor.upload');
 
 //controller
+
   public function ckeditorUpload(Request $request)
     {
         if ($request->hasFile('upload')) {
