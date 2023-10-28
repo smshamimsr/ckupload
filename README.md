@@ -22,6 +22,7 @@ Route::post('ckeditor-upload', [TestmonialController::class, 'ckeditorUpload'])-
     }
 
 //js script
+
 <script>
         ClassicEditor
             .create(document.querySelector('#blog'), {
