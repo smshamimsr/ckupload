@@ -1,18 +1,8 @@
- <script>
-        ClassicEditor
-            .create(document.querySelector('#blog'), {
-                ckfinder: {
-                    uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}"
-                }
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-
+    
+//Route
 Route::post('ckeditor-upload', [TestmonialController::class, 'ckeditorUpload'])->name('ckeditor.upload');
 
-
+//controller
   public function ckeditorUpload(Request $request)
     {
         if ($request->hasFile('upload')) {
@@ -29,6 +19,18 @@ Route::post('ckeditor-upload', [TestmonialController::class, 'ckeditorUpload'])-
         }
     }
 
+//js script
+<script>
+        ClassicEditor
+            .create(document.querySelector('#blog'), {
+                ckfinder: {
+                    uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}"
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 
 
