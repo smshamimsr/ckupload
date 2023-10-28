@@ -1,7 +1,5 @@
 
 
-//js script
-
 <script>
         ClassicEditor
             .create(document.querySelector('#blog'), {
@@ -13,6 +11,8 @@
                 console.error(error);
             });
     </script>
+
+
 
 
     
